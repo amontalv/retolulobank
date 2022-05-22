@@ -12,8 +12,7 @@ public class UpdateUserStepdefinition {
     @When("user want update information of user")
     public void userWantUpdateInformationOfUser(DataTable dataTable) {
         List<String> values = dataTable.values();
-        OnStage.theActorInTheSpotlight().attemptsTo(UpdateUser.withUsername(values.get(0))
-                .withPhone(values.get(1)));
+        OnStage.theActorInTheSpotlight().attemptsTo(UpdateUser.withData(values));
     }
 
 }
